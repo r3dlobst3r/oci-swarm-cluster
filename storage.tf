@@ -13,7 +13,7 @@ resource "oci_objectstorage_bucket" "swarm" {
 
 resource "oci_objectstorage_object" "oci_swarm_wallet" {
   bucket    = oci_objectstorage_bucket.swarm.name
-  content   = data.oci_database_autonomous_database_wallet.autonomous_database_wallet.content
+  content   = oci_database_autonomous_database_wallet.autonomous_database_wallet.content
   namespace = data.oci_objectstorage_namespace.user_namespace.namespace
   object    = "oci_swarm_atp_wallet"
 }
