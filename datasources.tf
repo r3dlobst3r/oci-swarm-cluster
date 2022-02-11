@@ -74,8 +74,8 @@ data "oci_limits_resource_availability" "compute_resource_availability" {
   count = length(data.oci_identity_availability_domains.ADs.availability_domains)
 }
 resource "random_shuffle" "compute_ad" {
-  #input        = local.compute_available_limit_ad_list
-  input        = 2
+  input        = local.compute_available_limit_ad_list
+  #input        = 2
   #result_count = length(local.compute_available_limit_ad_list)
   result_count = 2
 }
