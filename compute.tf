@@ -3,7 +3,8 @@
 # 
 
 resource "oci_core_instance" "app_instance" {
-  availability_domain                 = random_shuffle.compute_ad.result[count.index % length(random_shuffle.compute_ad.result)]
+  #availability_domain                 = random_shuffle.compute_ad.result[count.index % length(random_shuffle.compute_ad.result)]
+  availability_domain                 = 2
   compartment_id                      = var.compartment_ocid
   display_name                        = "oci-swarm-${random_string.deploy_id.result}-${count.index}"
   shape                               = var.instance_shape
