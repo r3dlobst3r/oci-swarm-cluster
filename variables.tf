@@ -22,10 +22,10 @@ variable "public_ssh_key" {
 
 # Compute
 variable "num_nodes" {
-  default = 2
+  default = 3
 }
 variable "memory_in_gbs" {
-  default = 12
+  default = 8
 }
 variable "ocpus" {
   default = 2
