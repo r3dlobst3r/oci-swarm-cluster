@@ -5,6 +5,7 @@
 resource "oci_identity_user" "oci_user" {
     #Required
     compartment_id = var.tenancy_ocid
+    email = "none@none.com"
     description = "Swarm User to access Cloud Storage"
     name = "swarm-${random_string.deploy_id.result}"
 }
